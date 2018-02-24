@@ -6,7 +6,10 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
   Return
 
 #w::
-  Run, chrome.exe
+  IfWinExist, ahk_exe chrome.exe
+    WinActivate
+  else
+    Run, chrome.exe
   Return
 
 #+w::
@@ -14,7 +17,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
   Return
 
 #e::
-  IfWinExist, Wavebox
+  IfWinExist, ahk_exe Wavebox.exe
     WinActivate
   else
     Run, C:\Users\tgrehawi\AppData\Local\wavebox\Wavebox.exe
@@ -31,7 +34,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 
 #s::
   Run, snippingtool.exe
-  WinWait, Snipping Tool,, 3
+  WinWait, ahk_exe snippingtool.exe,, 3
   if ErrorLevel
     TrayTip, AHK, Snipping Tool timed out!
   else
