@@ -16,13 +16,6 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
   Run, chrome.exe --incognito
   Return
 
-#e::
-  IfWinExist, ahk_exe Wavebox.exe
-    WinActivate
-  else
-    Run, C:\Users\tgrehawi\AppData\Local\wavebox\Wavebox.exe
-  Return
-
 #a::
   Run, C:\Users\tgrehawi\AppData\Local\wsltty\bin\mintty.exe --wsl -o Locale=C -o Charset=UTF-8 /bin/wslbridge -C~ -t /bin/bash
   Return
