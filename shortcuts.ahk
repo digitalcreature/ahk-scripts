@@ -20,11 +20,6 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
   Run, C:\Users\tgrehawi\AppData\Local\wsltty\bin\mintty.exe --wsl -o Locale=C -o Charset=UTF-8 /bin/wslbridge -C~ -t /bin/bash
   Return
 
-#z::
-  Run, C:\Users\tgrehawi\AppData\Local\wsltty\bin\mintty.exe --wsl -o Locale=C -o Charset=UTF-8 /bin/wslbridge -C~ -t /usr/bin/ssh zeus
-  Return
-
-
 #s::
   Run, snippingtool.exe
   WinWait, ahk_exe snippingtool.exe,, 3
